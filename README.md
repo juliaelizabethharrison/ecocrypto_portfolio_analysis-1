@@ -1,4 +1,4 @@
-# **Eco-Crypto Investment Portfolio Analysis** #
+# **Cryptocurrency for Energy Conscious Investors** #
 
 ## *WorkInProgress* ##
 
