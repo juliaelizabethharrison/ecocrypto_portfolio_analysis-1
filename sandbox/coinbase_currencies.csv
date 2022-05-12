@@ -1,0 +1,179 @@
+id,name,min_size,status,max_precision
+DOT,Polkadot,0.01,online,0.001
+ALGO,Algorand,1,online,0.000001
+ATOM,Cosmos,1,online,0.000001
+ACH,Alchemy Pay,0.1,online,0.00000001
+1INCH,1Inch,0.1,online,0.01
+AERGO,Aergo,0.00000001,online,0.00000001
+ARPA,ARPA,1,online,0.1
+MIR,Mirror Protocol,0.1,online,0.01
+DASH,Dash,1,online,0.00000001
+BAL,Balancer,0.1,online,0.01
+QUICK,QuickSwap,0.001,online,0.0001
+ROSE,Oasis Network,0.00000001,online,0.00000001
+ENS,Ethereum Name Service,0.001,online,0.00000001
+USDT,Tether,1,online,0.1
+IOTX,IoTeX (ERC-20),10,online,1
+BLZ,Bluzelle,0.1,online,0.00000001
+PLU,Pluton,0.01,online,0.00000001
+REN,Ren,1,online,0.1
+DESO,Decentralized Social,0.000001,online,0.000001
+LTC,Litecoin,0.00000001,online,0.00000001
+TBTC,TBTC,0.00001,online,0.000001
+PRO,Propy,0.00000001,online,0.00000001
+API3,API3,0.1,online,0.01
+FARM,Harvest Finance,0.01,online,0.001
+XLM,Stellar,1,online,0.0000001
+KRL,kryll,0.1,online,0.0001
+CTX,Cryptex Finance,0.01,online,0.001
+COVAL,Circuits of Value,0.00000001,online,0.00000001
+STX,Stacks,0.000001,online,0.000001
+DNT,district0x,1,online,0.00000001
+CGLD,Celo,0.1,online,0.01
+AMP,Amp,10,online,1
+PERP,Perpetual Protocol,0.01,online,0.001
+SHPING,Shping,0.00000001,online,0.00000001
+NCT,Polyswarm,0.00000001,online,0.00000001
+SUKU,SUKU,0.00000001,online,0.00000001
+MPL,Maple,0.01,online,0.00000001
+ORCA,Orca,0.000001,online,0.000001
+VGX,Voyager Token,0.00000001,online,0.00000001
+AAVE,Aave,0.01,online,0.001
+POLY,Polymath Network,1,online,1
+USDC,USD Coin,0.000001,online,0.000001
+GBP,British Pound,0.01,online,0.01
+GYEN,GYEN,0.000001,online,0.000001
+DIA,DIA,0.01,online,0.00000001
+BTC,Bitcoin,0.00000001,online,0.00000001
+SUSHI,SushiSwap,0.1,online,0.01
+ADA,Cardano,1,online,0.1
+WLUNA,Wrapped Luna,0.01,online,0.001
+LRC,Loopring,1,online,0.00000001
+GNT,Golem,1,delisted,0.00000001
+CRV,Curve DAO Token,0.1,online,0.01
+FIL,Filecoin,0.01,online,0.001
+ALICE,My Neighbor Alice,0.00000001,online,0.000001
+MATIC,Polygon,1,online,0.0000001
+CHZ,Chiliz,1,online,0.1
+TRIBE,Tribe,1,online,0.1
+GFI,Goldfinch,0.1,online,0.00000001
+LOOM,Loom Network,1,online,0.00000001
+ORN,Orion Protocol,0.1,online,0.01
+OGN,Origin Token,0.1,online,0.01
+KEEP,Keep Network,1,online,0.1
+FET,Fetch.ai,1,online,0.1
+BICO,Biconomy,1,online,0.00000001
+SPELL,Spell Token,10,online,0.00000001
+MLN,Enzyme,0.01,online,0.001
+PLA,PlayDapp,1,online,0.1
+GMT,STEPN,0.00000001,online,0.00000001
+BCH,Bitcoin Cash,0.00000001,online,0.00000001
+GAL,Project Galaxy,0.00000001,online,0.00000001
+RAD,Radicle,0.1,online,0.01
+ALCX,Alchemix,0.0001,online,0.00000001
+MDT,Measurable Data Token,1,online,0.00000001
+ZEC,Zcash,0.00000001,online,0.00000001
+RNDR,Render Token,0.00000001,online,0.00000001
+RLY,Rally,1,online,1
+COTI,COTI,1,online,0.1
+SKL,SKALE,1,online,0.1
+ETC,Ether Classic,0.00000001,online,0.00000001
+REQ,Request,10,online,1
+RGT,Rari Governance Token,0.01,online,0.001
+UNI,Uniswap,1,online,0.000001
+WCFG,Wrapped Centrifuge,0.1,online,0.01
+FOX,ShapeShift FOX Token,0.1,online,0.00000001
+HIGH,Highstreet,0.00000001,online,0.00000001
+BAND,Band Protocol,0.1,online,0.01
+MCO2,Moss Carbon Credit,0.01,online,0.00000001
+AUCTION,Bounce Token,0.01,online,0.001
+OMG,OMG Network,1,online,0.00000001
+YFI,yearn.finance,0.00001,online,0.000001
+LINK,Chainlink,1,online,0.00000001
+ASM,Assemble Protocol,10,online,1
+GRT,The Graph,10,online,0.01
+MANA,Decentraland,1,online,0.00000001
+AXS,Axie Infinity,0.01,online,0.001
+XRP,XRP,1,delisted,0.000001
+IDEX,IDEX,0.1,online,0.00000001
+ZRX,0x,0.00001,online,0.00000001
+POWR,Power Ledger,0.000001,online,0.000001
+XYO,XYO,100,online,0.1
+USD,United States Dollar,0.01,online,0.01
+AIOZ,Aioz Network,0.00000001,online,0.00000001
+RARI,Rarible,0.01,online,0.001
+SUPER,SuperFarm,0.01,online,0.00000001
+AVT,Aventus,0.01,online,0.00000001
+GST,Green Satoshi Token,0.00000001,online,0.00000001
+ENJ,Enjin Coin,0.1,online,0.01
+BNT,Bancor,1,online,0.000001
+NMR,Numeraire,0.01,online,0.001
+RLC,iExec RLC,0.1,online,0.01
+EUR,Euro,0.01,online,0.01
+APE,ApeCoin,0.00000001,online,0.00000001
+RAI,Rai Reflex Index,0.1,online,0.01
+SNT,Status,0.00000001,online,0.00000001
+UMA,UMA,0.01,online,0.001
+CRO,Crypto.com Coin,0.00000001,online,0.00000001
+TRAC,OriginTrail,0.1,online,0.0001
+MUSD,mStable USD,0.01,online,0.00000001
+UNFI,Unifi Protocol DAO,0.01,online,0.00000001
+RBN,Ribbon Finance,0.1,online,0.00000001
+REP,Augur,0.000001,online,0.00000001
+YFII,DFI.Money,0.0001,online,0.00000001
+BOND,BarnBridge,0.01,online,0.001
+TRB,Tellor,0.01,online,0.001
+SNX,Synthetix,0.1,online,0.001
+BTRST,Braintrust,1,online,0.01
+XTZ,Tezos,0.000001,online,0.000001
+COMP,Compound,0.01,online,0.001
+NKN,NKN,1,online,0.1
+ANKR,Ankr,10,online,0.00000001
+QSP,Quantstamp,0.00000001,online,0.00000001
+CVC,Civic,1,online,0.00000001
+GLM,Golem Network,0.00000001,online,0.00000001
+SHIB,Shiba Inu,100000,online,1
+UST,TerraUSD,1,online,0.01
+JASMY,JasmyCoin,10,online,0.00000001
+DAI,Dai,0.00001,online,0.00001
+MASK,Mask Network,0.1,online,0.01
+INV,Inverse Finance,0.00000001,online,0.00000001
+STORJ,Storj,1,online,0.01
+QNT,Quant,0.01,online,0.001
+CRPT,Crypterium,0.00000001,online,0.00000001
+DDX,DerivaDAO,0.1,online,0.01
+AVAX,Avalanche,0.01,online,0.001
+PAX,Paxos Standard,0.1,online,0.01
+BUSD,Binance USD,0.00000001,online,0.00000001
+LQTY,Liquity,0.00000001,online,0.00000001
+SYN,Synapse,0.00000001,online,0.00000001
+BAT,Basic Attention Token,1,online,0.00000001
+WBTC,Wrapped Bitcoin,0.0001,online,0.00000001
+BADGER,Badger DAO,0.01,online,0.001
+CTSI,Cartesi,1,online,0.1
+POLS,Polkastarter,0.01,online,0.00000001
+FX,Function X,1,online,0.1
+FORTH,Ampleforth Governance Token,0.01,online,0.001
+TRU,TrueFi,1,online,0.1
+FIDA,Bonfida,0.000001,online,0.000001
+MKR,Maker,0.001,online,0.00001
+GALA,Gala,0.00000001,online,0.00000001
+MINA,Mina,0.00000001,online,0.00000001
+LPT,Livepeer,0.01,online,0.001
+DOGE,Dogecoin,1,online,0.1
+AGLD,Adventure Gold,0.1,online,0.01
+ZEN,Horizen,0.01,online,0.001
+LCX,LCX Token,0.1,online,0.0001
+IMX,ImmutableX,0.1,online,0.00000001
+SOL,Solana,0.01,online,0.000000001
+EOS,EOS,0.1,online,0.0001
+OXT,Orchid,1,online,0.00000001
+ETH,Ether,0.00000001,online,0.00000001
+UPI,Pawtocol,1,online,0.00000001
+KNC,Kyber Network,1,online,0.00000001
+ERN,Ethernity Chain,0.001,online,0.00000001
+GODS,Gods Unchained,0.1,online,0.00000001
+GTC,Gitcoin,0.1,online,0.01
+ICP,Internet Computer,0.01,online,0.001
+NU,NuCypher,10,online,0.000001
+CLV,Clover Finance,0.1,online,0.00000001
