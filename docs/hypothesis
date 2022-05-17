@@ -1,0 +1,123 @@
+The purpose of our project is to research and investigate eco-friendly blockchain technologies while also comparing them to traditional/non eco-friendly blockchain technologies.
+
+We will need to define eco-friendly blockchain/crypto protocols in order to differentiate them from non eco-friendly ones.
+
+The first thing that comes to our mind would be the topic of energy consumption of blockchain technologies and evaluation their energy efficiency, the use of less energy to perform the same task or produce the same result.
+
+ENERGY EFFICIENCY OF BLOCKCHAIN TECHNOLOGIES (Article)
+
+As the topic of energy consumption with blockchain technologies has been brought into the media's attention more recently, especially in relation to the energy consumption of Bitcoin, energy efficient and sustainable technology has triggered discussion and debate in the topic of blockchain's ability to be a sustainable ecosystem.
+
+Consensus Mechanisms in regards to Blockchain Energy Consumption 
+- it seems that this is the only information available atm 
+- we can define other parameters to look at (table with security, price, throughput)
+
+
+Should security and throughput be considered? They are important aspects in real world application. 
+
+We are looking holistically at all types of blockchains: Proof-of-Work, Proof-of-Stake, hybrids
+****There are more than these now since this article PoA, PoAc, Poc, BFT, Others)****
+****We should just stick to the main ones****
+
+Cryptocurrencies- the theme seems to deal with the topic of the energy efficiency of the ICT infrastructure that is used for cryptocurrency mining
+
+Given the fact that the technologies underpinning crypto are powered by electricity, industries are beginning to decarbonize their operations as a means to facilitate widespread, sustainable industry growth. 
+
+Future research in initiatives for decarbonizing the cryptocurrency industry and the Crypto Climate Accord was launched as a private sector-led initiative for the entire crypto community focused on decarbonizing the cryptocurrency industry in record time. 
+
+Companies, local, state and national governments should consider the energy consumption and efficiency of blockchain when deciding on the underlying technology for developing their necessary digital infrastructure. Closely related is scalability and and performance in regards to they energy efficiency. Therefore we will take these two issues into consideration with our parameters and recommendations. 
+
+
+Future- make sure renewable energy is used to the maximum potential for the demand of energy of blockchain-based solutions. 
+
+
+Energy efficiency (energy consumption) of blockchain solutions is highly related to the underlying mechanism that is used for achieving consensus between the nodes of the network. 
+
+Examples: 
+
+-Proof-of-Work = Bitcoin, Ethereum - characterized by high energy consumption 
+possilibly more scalable, same security and performance while being more energy efficient:
+-Proof-of-Stake = 
+-Proof-of-Authority = 
+
+Blockchain Consensus = procedures through which the different participants of a blockchain network agree on a specific state of data on the system referred to as the correct state
+
+
+Three main classes of consensus protocols for blockchains:
+Proof-of-X (PoX) consensus protocols
+Byzantine Fault Tolerant (BFT) protocols
+Hybrid consensus protocols 
+
+The recent complex consensus implementations proposed by new blockchain platforms consists in creative combinations of PoX and BFT protocols. 
+
+
+
+Blockchain recently has been associated with inefficiency and disproportionate energy consumption.
+
+Blockchain technology is not homogenous, and the amount of energy consumed by different consensus mechanisms varies by several orders of magnitude. Also, energy consumption doesn’t grow with the number of transactions executed all of the time. 
+
+Overview of consensus mechanisms and their roles in different blockchains, their energy consumption and the parameters that influence it. 
+
+******Do we have this data though? ????????? If yes, let’s make a ratio/formula. If no, lets choose based on whatever data we currently have available****
+
+
+Proof of Work- the scare resource is the computation power of each user. In this mechanism, the nodes complete for the solution of a computationally expensive and energy-intensive cryptographic puzzle (“mining”). The winner of the competition gets to create the next block and receives a specific amount of the blockchain’s native currency and fess for the transactions included in this blocks as a reward. High economic risk because the resources invested into mining a block would likely be wasted when the next miner do3s not accept the block and prefers to build on an alternative block instead. The complexity of the cryptographic puzzle increases as more mining power is present to keep th average time between new blocks at a constant level and allowing stable functionality. Mining power is driven by economic incentives through block rewards (proportional to the current price for the cryptocurrency) and transaction fees. PoW has become more computationally demanding over time . 
+
+Proof of Stake- the scarce resource is each user’s share of the blockchain’s native currency. This mechanism is considerably less energy remaining than PoW with comparable security. However the initial coin allocation is critical since poor disctubution can result in permanent concentration of power. The probability of creating the next block is proportion to the number of coins held, therefore remuneration corresponds to the interest at a rate that is at the same for every participant. While rich users get more rewards in absolute figures, their relative stake does not change over time. 
+
+3 Types:
+PPoS- Algorand
+DPoS- EOS, TRON
+BPoS- Ethereum 2.0, Chain
+
+Comparison of Energy Consumption- 
+3 main categories that contribute to the energy consumption of blockhains 
+1- Consumption deriving from consensus mechanisms
+2- redundant computation ane storage associated with the blockchain’s operations
+3- idle energy consumption of each node
+
+PoW- 1 more responsible for energy consumption
+Non-PoW- 2&3 do 
+
+Lower bound energy consumption = the observable hash rate (expected compute power) & most energy efficient mining hardware on the market
+
+Upper bound energy consumption = via assumption that mining is profitable (price of crypto currency, # of new coins created per block, transaction fees and lowest electricity costs on the market). Mostly the price of the crypto as transaction fees account for only 10% so that’s why Bitcoins is so high due to how high it’s price has become. 
+
+When it comes to PoS, CFT and BFT based blockchains, the consensus mechanism consumes orders of magnitude less energy than PoW b/c there is no mining process- 99% or higher reduction. 
+
+Crypto Protocol Grouping:
+
+Green by their purpose:
+SolarCoin
+GreenTrust
+Efforce
+
+Noted in online Articles as being some of the most eco-friendly based on a variety of factors unique to each cryptocurrency:
+
+Mina Protocol- is touted as the world’s highest blockchain at just 22kb
+IOTA (MIOTA)- 
+Nano-  Powerledger - PoS
+Cardano - PoS
+Stellar- 
+Avalanche- 
+Tezos- 
+Algorand- 
+Hedera- 
+
+
+Hybrids:
+ReddCoin
+More? 
+
+
+
+
+Our definition of eco friendly (energy efficient) was originally based on coming up with a formula based on energy consumption, however, the data just isn’t there at the moment in order to compare multiple coins, so we redefined eco friendly based on the consensus protocol mechanism: PoW, PoS, Hybrid. 
+
+PoW
+
+
+PoS
+
+
+Hybrid 
