@@ -1,0 +1,10 @@
+Coin Name,Kilowatts,TVL per kWh,Verification method for transactions,Speed of transactions?,Size of Network,Release Date
+Bitcoin,"89,780,000,000 kWh","$10,224,775,841 annual electricity costs",PoW,4.6 transactions/second,324 GB,2009
+Ethereum,"17,300,000,000 kWh",,,,,
+Avalanche (AVAX),"489,311 kWh","$18,454 per kWh",PoS,4500 transaction/second,2 GB,2015
+Solana,"1,967,930 kWh","$4,395 per kWh",PoS,"65,000 transaction/second",200 GB with various nodes,2020
+Cardano,"598,755 kWh",$120 per kWh,PoS,250 transactions/second,88 KB,2017
+Polkadot,"70,237 kWh",$19.18 per kWh,PoS,,,
+Tezos,"94,120 kWh",$943 per kWh,PoS,,,
+Algorand,"512,671 kWh",$161 per kWh,PoS,,,
+Bitcoin,"89,780,000,000 kWh",,,,,
