@@ -87,7 +87,7 @@ pip install python-dotenv
 conda install -c pyviz hvplot -y
 
 ```
-3. Clone this repository, then clone and run the notebook through voila.
+3. Clone this repository, then clone and run the Jupyter notebook.
 
 **(eco_portfolio)**
 ```bash
