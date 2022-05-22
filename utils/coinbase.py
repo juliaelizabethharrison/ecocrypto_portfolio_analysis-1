@@ -1,9 +1,12 @@
 import os
+import glob
 import fnmatch
 import pandas as pd
+import numpy as np
+import time
 import requests
 import json
-import time
+import warnings
 from pathlib import Path
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
@@ -13,6 +16,10 @@ load_dotenv()
 cb_pro = os.getenv("COINBASE_PRO_FQDN")
 cb_pub = os.getenv("COINBASE_PUB_FQDN")
 cb_sandbox = os.getenv("COINBASE_SANDBOX_FQDN")
+
+# Set our lists
+pow_coins = ["BTC-USD","ETH-USD"]
+pos_coins = ["ADA-BTC","SOL-BTC","ALGO-BTC","XTZ-BTC"]
 
 def sleep(t):
     time.sleep(t)
@@ -123,7 +130,7 @@ def get_products():
 
 
 def fetch_product_candles(product, gran, start, end):
-    
+   
     url = f'{cb_pub}/products/{product}/candles?granularity={gran}&start={start}&end={end}'
     response = requests.get(url)
     if response.status_code == 200:
@@ -166,7 +173,7 @@ def fetch_return_history(coin, date, seq):
     
     files = []
     for file in os.listdir("data/product/candles"):
-        if os.path.getsize(f"data/product/candles/{file}") < 1 * 1024:
+        if os.path.getsize(f"data/product/candles/{file}") < 1 * 64:
             os.remove(f"data/product/candles/{file}")
             files.append(file)
 
@@ -199,6 +206,13 @@ def merge_candle_data(coin):
 
     filename = f'data/product/candles/merged/coinbase_{coin}_candles_ALL.csv'
     joined_data.to_csv(Path(filename))
+    
+    files_deleted = []
+    for file in os.listdir("data/product/candles"):
+        if fnmatch.fnmatch(file, f'*{coin}*'):
+            os.remove(f"data/product/candles/{file}")
+            files_deleted.append(file)
+            
     print(f"Sucessfully merged {len(dis_df)} rows from {len(files)} files into the returned Dataframe.")
 
     return None
@@ -232,3 +246,51 @@ def get_merged_candle_data(coin):
 #     print(f"Sucessfully merged {len(dis_df)} rows from {len(files)} files into the returned Dataframe.")
 
     return joined_data
+
+
+def get_portfolio_lists():
+    
+    # currencies_df = get_currencies()
+    products_online_df = get_products()
+
+    ## Filter by `base_currency` to get all crypto currencies by fiat `USD` and import into a DataFrame
+    btc_usd_products_df = products_online_df.loc[(products_online_df['base_currency'] == 'BTC')&(products_online_df['quote_currency'] == 'USD')].copy().drop(columns=["quote_currency"])
+    eth_usd_products_df = products_online_df.loc[(products_online_df['base_currency'] == 'ETH')&(products_online_df['quote_currency'] == 'USD')].copy().drop(columns=["quote_currency"])
+    btc_products_df = products_online_df.loc[(products_online_df['quote_currency'] == 'BTC')].copy().drop(columns=["quote_currency"])
+    eth_products_df = products_online_df.loc[(products_online_df['quote_currency'] == 'ETH')].copy().drop(columns=["quote_currency"])
+
+    # Pandas concat() inner join into a list()
+    pow_coins = pd.concat([btc_usd_products_df['id'],eth_usd_products_df['id']], join="inner").tolist()
+    pos_coins = ["ADA-BTC","SOL-BTC","ALGO-BTC","XTZ-BTC"]
+    
+    return [pow_coins, pos_coins]
+
+
+def initialize_df_collection():
+    
+    # Using glob functionality to grab the filenames of our merged data into a pandas dictionary
+    extension = 'csv'
+    files = glob.glob('data/product/candles/merged/*.{}'.format(extension))
+    file_dict = {}
+    for file in files:
+        key = file
+        df = pd.read_csv(file)
+        file_dict[key] = df
+
+    # Now rename our dataframes to prevent headaches:
+    btc_df = file_dict["data/product/candles/merged/coinbase_BTC-USD_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+    eth_df = file_dict["data/product/candles/merged/coinbase_ETH-USD_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+    ada_df = file_dict["data/product/candles/merged/coinbase_ADA-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+    sol_df = file_dict["data/product/candles/merged/coinbase_SOL-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+    algo_df = file_dict["data/product/candles/merged/coinbase_ALGO-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+    xtz_df = file_dict["data/product/candles/merged/coinbase_XTZ-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+
+    # Adding pct change to all df
+    btc_df["pct_change"] = btc_df["close"].pct_change().fillna(0) 
+    eth_df["pct_change"] = eth_df["close"].pct_change().fillna(0) 
+    ada_df["pct_change"] = ada_df["close"].pct_change().fillna(0) 
+    sol_df["pct_change"] = sol_df["close"].pct_change().fillna(0) 
+    algo_df["pct_change"] = algo_df["close"].pct_change().fillna(0)
+    xtz_df["pct_change"] = xtz_df["close"].pct_change().fillna(0)
+    
+    return btc_df, eth_df, ada_df, sol_df, algo_df, xtz_df
