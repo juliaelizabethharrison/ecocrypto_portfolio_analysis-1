@@ -12,14 +12,19 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 load_dotenv()
 
-## Our coinbase Data Retrieval Library
+"""
+Utility library used to pull data from the Coinbase api
+
+Requires:
+- coinbase api key (not implimented)
+- dotenv installed to read environment variables.
+
+"""
+
+## Coinbase Data Retrieval Library
 cb_pro = os.getenv("COINBASE_PRO_FQDN")
 cb_pub = os.getenv("COINBASE_PUB_FQDN")
 cb_sandbox = os.getenv("COINBASE_SANDBOX_FQDN")
-
-# Set our lists
-pow_coins = ["BTC-USD","ETH-USD"]
-pos_coins = ["ADA-BTC","SOL-BTC","ALGO-BTC","XTZ-BTC"]
 
 def sleep(t):
     time.sleep(t)
@@ -92,7 +97,11 @@ def fetch_product_stats(product):
     
     
 def get_currencies():
+    """
+    Input: String
+    Returns: json text response for currencies
     
+    """    
     coin_url = f"{cb_pub}/currencies"
     coin_response = requests.get(coin_url)
     if coin_response.status_code == 200:
@@ -109,7 +118,11 @@ def get_currencies():
 
 
 def get_products():
+    """
+    Input: String
+    Returns: json text response for products
     
+    """    
     product_url = f"{cb_pub}/products"
     headers = {"Accept": "application/json"}
     product_response = requests.get(product_url, headers=headers)
@@ -265,32 +278,32 @@ def get_portfolio_lists():
     
     return [pow_coins, pos_coins]
 
-
-def initialize_df_collection():
+# Dataframes must be initialized within the runtime env
+# def initialize_df_collection():
     
-    # Using glob functionality to grab the filenames of our merged data into a pandas dictionary
-    extension = 'csv'
-    files = glob.glob('data/product/candles/merged/*.{}'.format(extension))
-    file_dict = {}
-    for file in files:
-        key = file
-        df = pd.read_csv(file)
-        file_dict[key] = df
+#     # Using glob functionality to grab the filenames of our merged data into a pandas dictionary
+#     extension = 'csv'
+#     files = glob.glob('data/product/candles/merged/*.{}'.format(extension))
+#     file_dict = {}
+#     for file in files:
+#         key = file
+#         df = pd.read_csv(file)
+#         file_dict[key] = df
 
-    # Now rename our dataframes to prevent headaches:
-    btc_df = file_dict["data/product/candles/merged/coinbase_BTC-USD_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
-    eth_df = file_dict["data/product/candles/merged/coinbase_ETH-USD_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
-    ada_df = file_dict["data/product/candles/merged/coinbase_ADA-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
-    sol_df = file_dict["data/product/candles/merged/coinbase_SOL-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
-    algo_df = file_dict["data/product/candles/merged/coinbase_ALGO-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
-    xtz_df = file_dict["data/product/candles/merged/coinbase_XTZ-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+#     # Now rename our dataframes to prevent headaches:
+#     btc_df = file_dict["data/product/candles/merged/coinbase_BTC-USD_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+#     eth_df = file_dict["data/product/candles/merged/coinbase_ETH-USD_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+#     ada_df = file_dict["data/product/candles/merged/coinbase_ADA-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+#     sol_df = file_dict["data/product/candles/merged/coinbase_SOL-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+#     algo_df = file_dict["data/product/candles/merged/coinbase_ALGO-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
+#     xtz_df = file_dict["data/product/candles/merged/coinbase_XTZ-BTC_candles_ALL.csv"].drop(columns=["Unnamed: 0","unix"]).set_index("time")
 
-    # Adding pct change to all df
-    btc_df["pct_change"] = btc_df["close"].pct_change().fillna(0) 
-    eth_df["pct_change"] = eth_df["close"].pct_change().fillna(0) 
-    ada_df["pct_change"] = ada_df["close"].pct_change().fillna(0) 
-    sol_df["pct_change"] = sol_df["close"].pct_change().fillna(0) 
-    algo_df["pct_change"] = algo_df["close"].pct_change().fillna(0)
-    xtz_df["pct_change"] = xtz_df["close"].pct_change().fillna(0)
+#     # Adding pct change to all df
+#     btc_df["pct_change"] = btc_df["close"].pct_change().fillna(0) 
+#     eth_df["pct_change"] = eth_df["close"].pct_change().fillna(0) 
+#     ada_df["pct_change"] = ada_df["close"].pct_change().fillna(0) 
+#     sol_df["pct_change"] = sol_df["close"].pct_change().fillna(0) 
+#     algo_df["pct_change"] = algo_df["close"].pct_change().fillna(0)
+#     xtz_df["pct_change"] = xtz_df["close"].pct_change().fillna(0)
     
-    return btc_df, eth_df, ada_df, sol_df, algo_df, xtz_df
+#     return btc_df, eth_df, ada_df, sol_df, algo_df, xtz_df

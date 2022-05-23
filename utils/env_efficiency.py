@@ -55,7 +55,7 @@ def bar_chart(df):
     df = df.filter(["Symbol","Algorithm","Efficiency","RatedPowerKW"], axis=1).sort_values("RatedPowerKW")
     
     # Create the bar chart
-    bar = df.hvplot.bar(x="Symbol", y="RatedPowerKW", title="Rated Power per Cryptocurrency", hover_cols=["Efficiency","Symbol", "Algorithm"],width=900, height=400)
+    bar = df.hvplot.bar(x="Symbol", y="RatedPowerKW", title="Rated Power per Cryptocurrency", hover_cols=["Efficiency","Symbol", "Algorithm"],width=700, height=400)
     
     return bar
 
@@ -68,7 +68,7 @@ def bar_chart_top_five(df):
     df = df[:5].filter(["Symbol","Algorithm","Efficiency","RatedPowerKW"], axis=1).sort_values("Efficiency")
     
     # Create the bar chart
-    bar = df.hvplot.bar(x="Symbol", y="Efficiency", title="Rated Power per Top-5 PoS Cryptocurrencies", hover_cols=["Efficiency","Symbol", "Algorithm"], width=900, height=400)
+    bar = df.hvplot.bar(x="Symbol", y="Efficiency", title="Rated Power per Top-5 PoS Cryptocurrencies", hover_cols=["Efficiency","Symbol", "Algorithm"], width=700, height=400)
  
     return bar
 
@@ -78,7 +78,7 @@ def bar_chart_bottom_five(df):
     df = df.filter(["Symbol","Algorithm","Efficiency","RatedPowerKW"], axis=1).sort_values("Efficiency")
     
     # Create the bar chart
-    bar = df.hvplot.bar(x="Symbol", y="Efficiency", title="Rated Power per Top-5 PoS Cryptocurrencies", hover_cols=["Efficiency","Symbol", "Algorithm"], width=900, height=400)
+    bar = df.hvplot.bar(x="Symbol", y="Efficiency", title="Rated Power per Top-5 PoS Cryptocurrencies", hover_cols=["Efficiency","Symbol", "Algorithm"], width=700, height=400)
  
     return bar
 
@@ -94,7 +94,7 @@ def make_pie(df):
         return "{:.1f}%\n({:d} USD)".format(pct, absolute)
 
     ## Creating plot
-    fig, ax = plt.subplots(figsize =(10, 10))
+    fig, ax = plt.subplots(figsize =(8, 8))
     wedges, texts, autotexts = ax.pie(data, autopct = lambda pct: func(pct, data), explode = (0.0, 0.0, 0.2, 0.2, 0.2, 0.2), labels = assets, startangle = 90)
     ax.legend(wedges, assets, title ="Assets", loc ="upper right", bbox_to_anchor = (1, 0, 0.25, 1))
     plt.setp(autotexts, size = 12)
@@ -109,7 +109,8 @@ def efficiency_scatter(df):
     df = df.filter(["Symbol","Algorithm","Hashes","Efficiency","RatedPowerKW","RatedPowerPct"], axis=1).sort_values("Hashes")
     
     # Create the bar chart
-    bar = df.hvplot.scatter(legend='top', x="Hashes", y="Efficiency", by="Algorithm", size=df["RatedPowerKW"]*10, padding=0.6, 
-                            title="Top-5 Most Environmentally Efficient PoS Cryptocurrencies", hover_cols=["RatedPowerPct", "Efficiency","Algorithm"], width=800, height=420)
+    bar = df.hvplot.scatter(legend='top', x="Hashes", y="Efficiency", by="Algorithm", size=df["RatedPowerKW"]*10, padding=0.8, 
+                            title="Top-5 Most Environmentally Efficient PoS Cryptocurrencies",
+                            hover_cols=["RatedPowerPct", "Efficiency","Algorithm"], width=900, height=400)
  
     return bar
