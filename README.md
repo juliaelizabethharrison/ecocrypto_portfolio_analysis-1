@@ -1,6 +1,6 @@
 # Cryptocurrency for Energy Conscious Investors
 
-Use this as a template for presenting findings. (Protfolio analysis using PoW, PoS and Hybrid Consensus Protocols)
+Use this as a template for presenting findings. (Portfolio analysis using PoW, PoS and Hybrid Consensus Protocols)
 
 ## Executive Summary
 
