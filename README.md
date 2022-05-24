@@ -43,8 +43,6 @@ We've created a DataFrame for analysis by importing trade data. Then, we perform
 
 ## Recomendations
 
-**(should this be moved to the bottom? I'm not sure.)**
-
 When deciding on the underlying technology for developing their necessary digital infrastructure, businesses, local, state, and national governments should consider the energy consumption and efficiency of blockchain. Scalability and performance in terms of energy efficiency are closely related. In the future, there should be a focus on maximizing the use of renewable energy to meet the energy demand of blockchain-based solutions. The energy efficiency (energy consumption) of blockchain solutions is closely related to the underlying mechanism used to achieve network consensus. Other types of consensus mechanisms and verification protocols should be developed to avoid excessive energy consumption as cryptocurrency becomes more popular and heavily invested in.
 
 References:
