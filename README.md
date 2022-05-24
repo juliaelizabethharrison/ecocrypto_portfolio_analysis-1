@@ -20,17 +20,6 @@ Given that the technologies underlying cryptocurrency are powered by electricity
 
 ![image](images/efficiency_scatter_plot.png)
 
-## Recomendations
-
-**(should this be moved to the bottom? I'm not sure.)**
-
-When deciding on the underlying technology for developing their necessary digital infrastructure, businesses, local, state, and national governments should consider the energy consumption and efficiency of blockchain. Scalability and performance in terms of energy efficiency are closely related. In the future, there should be a focus on maximizing the use of renewable energy to meet the energy demand of blockchain-based solutions. The energy efficiency (energy consumption) of blockchain solutions is closely related to the underlying mechanism used to achieve network consensus. Other types of consensus mechanisms and verification protocols should be developed to avoid excessive energy consumption as cryptocurrency becomes more popular and heavily invested in.
-
-References:
-
-###### (1) https://www.tradingview.com/symbols/CRYPTOCAP-BTC.D/ as of 5/22/22
-###### (2) https://www.tradingview.com/symbols/CRYPTOCAP-ETH/ as of 5/22/22
-###### (3) https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/eco-friendly-cryptocurrency/ retrieved 5/22/22 written on 5/12/22
 
 ### Quantatative Analysis ###
 
@@ -52,9 +41,17 @@ We've created a DataFrame for analysis by importing trade data. Then, we perform
 
 ![image](images/pow_mc_plot.png)
 
-## Conclusion ##
+## Recomendations
+
+**(should this be moved to the bottom? I'm not sure.)**
 
 When deciding on the underlying technology for developing their necessary digital infrastructure, businesses, local, state, and national governments should consider the energy consumption and efficiency of blockchain. Scalability and performance in terms of energy efficiency are closely related. In the future, there should be a focus on maximizing the use of renewable energy to meet the energy demand of blockchain-based solutions. The energy efficiency (energy consumption) of blockchain solutions is closely related to the underlying mechanism used to achieve network consensus. Other types of consensus mechanisms and verification protocols should be developed to avoid excessive energy consumption as cryptocurrency becomes more popular and heavily invested in.
+
+References:
+
+###### (1) https://www.tradingview.com/symbols/CRYPTOCAP-BTC.D/ as of 5/22/22
+###### (2) https://www.tradingview.com/symbols/CRYPTOCAP-ETH/ as of 5/22/22
+###### (3) https://www.fool.com/investing/stock-market/market-sectors/financials/cryptocurrency-stocks/eco-friendly-cryptocurrency/ retrieved 5/22/22 written on 5/12/22
 
 ## Technologies ##
 
